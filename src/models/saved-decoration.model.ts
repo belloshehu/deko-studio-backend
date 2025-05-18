@@ -13,9 +13,9 @@ const SavedDecorationSchema = new Schema<
 			ref: "User",
 			required: true,
 		},
-		decorationName: {
+		name: {
 			type: String,
-			required: true,
+			required: false,
 			trim: true,
 		},
 		image: {

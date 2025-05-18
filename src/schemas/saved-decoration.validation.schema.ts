@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const SavedDecorationValidationSchema = z.object({
-	decorationName: z.string().email(),
-	description: z.string().min(5, "Message must be at least 5 characters long"),
-	user: z.string(),
+	name: z.string().min(5, "Name must be at least 5 characters long"),
+	description: z.string().optional(),
+	user: z.string().optional(),
 	image: z.string(),
 	workspace: z.string(),
 });

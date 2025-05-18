@@ -3,7 +3,7 @@ import { Document, Schema } from "mongoose";
 
 export interface ISavedDecoration extends Document<any>, TimeStamps {
 	user: Schema.Types.ObjectId;
-	decorationName: string;
+	name: string;
 	image: string;
 	description: string;
 	workspace: Schema.Types.ObjectId;

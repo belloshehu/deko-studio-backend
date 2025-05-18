@@ -2,6 +2,7 @@ import HTTPException from "@/exceptions/http.exception";
 import { ISavedDecoration } from "@/interfaces/saved-decoration.interface";
 import SavedDecorationModel from "@/models/saved-decoration.model";
 import { StatusCodes } from "http-status-codes";
+import { Schema } from "mongoose";
 
 class SavedDecorationService {
 	// Add your service methods here
@@ -25,9 +26,13 @@ class SavedDecorationService {
 		return savedDecoration;
 	}
 
-	// get all saved decorations
-	async getAllSavedDecorations(): Promise<ISavedDecoration[]> {
-		const savedDecorations = await this.savedDecorationModel.find();
+	// get all saved decorations by User
+	async getAllSavedDecorationsByUser(
+		userId: string
+	): Promise<ISavedDecoration[]> {
+		const savedDecorations = await this.savedDecorationModel.find({
+			user: userId,
+		});
 		return savedDecorations;
 	}
 
@@ -76,3 +81,5 @@ class SavedDecorationService {
 
 	// Add any other methods you need for your service
 }
+
+export default SavedDecorationService;
