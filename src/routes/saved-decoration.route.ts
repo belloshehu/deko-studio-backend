@@ -6,7 +6,7 @@ import { SavedDecorationValidationSchema } from "@/schemas/saved-decoration.vali
 import { Router } from "express";
 
 class SavedDecorationRoute implements Routes {
-	public path = "/saved-decorations";
+	public path = "/decorations";
 	public router = Router();
 	public savedDecorationController = new SavedDecorationController();
 

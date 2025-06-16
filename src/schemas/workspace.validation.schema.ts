@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const WorkspaceValidationSchema = z.object({
-	name: z.string().email(),
+	name: z.string(),
 	description: z.string().optional(),
 	user: z.string(),
 });
