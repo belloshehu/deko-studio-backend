@@ -27,11 +27,13 @@ class SavedDecorationService {
 	}
 
 	// get all saved decorations by User
-	async getAllSavedDecorationsByUser(
-		userId: string
+	async getAllSavedDecorationsByWorkspace(
+		userId: string,
+		workspaceId: string
 	): Promise<ISavedDecoration[]> {
 		const savedDecorations = await this.savedDecorationModel.find({
 			user: userId,
+			workspace: workspaceId,
 		});
 		return savedDecorations;
 	}

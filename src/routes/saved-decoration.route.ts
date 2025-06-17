@@ -24,9 +24,9 @@ class SavedDecorationRoute implements Routes {
 			this.savedDecorationController.createSavedDecoration
 		);
 		this.router.get(
-			`${this.path}`,
+			`${this.path}/workspaces/:workspaceId`,
 			[authMiddleware],
-			this.savedDecorationController.getAllSavedDecorations
+			this.savedDecorationController.getAllSavedDecorationsByWorkspace
 		);
 		this.router.get(
 			`${this.path}/:id`,

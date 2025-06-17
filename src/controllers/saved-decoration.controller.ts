@@ -27,15 +27,17 @@ class SavedDecorationController {
 	};
 
 	// get all saved decorations by user
-	getAllSavedDecorations = async (
+	getAllSavedDecorationsByWorkspace = async (
 		req: RequestWithUser,
 		res: Response,
 		next: NextFunction
 	) => {
 		try {
+			const { workspaceId } = req.params;
 			const savedDecorations =
-				await this.savedDecorationService.getAllSavedDecorationsByUser(
-					req?.user?._id
+				await this.savedDecorationService.getAllSavedDecorationsByWorkspace(
+					req?.user?._id,
+					workspaceId as string
 				);
 			res.status(StatusCodes.OK).json({
 				data: savedDecorations,
