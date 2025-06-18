@@ -13,8 +13,13 @@ class WorkspaceService {
 		return workspace;
 	}
 	// Get all workspaces
-	async getAllWorkspaces() {
-		const workspaces = await this.workspaceModel.find();
+	async getAllWorkspaces(userId: string): Promise<IWorkspace[]> {
+		if (isEmpty(userId)) {
+			throw new HTTPException(StatusCodes.BAD_REQUEST, "Provide a user ID");
+		}
+		const workspaces = await this.workspaceModel
+			.find({ user: userId })
+			.populate("decorations");
 		return workspaces;
 	}
 	// Get a workspace by ID

@@ -32,12 +32,10 @@ class WorkspaceController {
 		res: Response,
 		next: NextFunction
 	) => {
-		console.log("this", this);
-
 		try {
-			console.log("this", this);
-
-			const workspaces = await this.workspaceService.getAllWorkspaces();
+			const workspaces = await this.workspaceService.getAllWorkspaces(
+				req.user?._id
+			);
 			res
 				.status(StatusCodes.OK)
 				.json({ data: workspaces, message: "Workspaces retrieved" });

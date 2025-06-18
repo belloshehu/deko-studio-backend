@@ -13,7 +13,8 @@ const InvitationSchema = new Schema<IInvitation, InvitationModelType>({
 	receiver: {
 		type: Schema.Types.ObjectId,
 		ref: "User",
-		required: true,
+		default: null,
+		required: false,
 	},
 	workspace: {
 		type: Schema.Types.ObjectId,

@@ -21,11 +21,20 @@ const WorkspaceSchema = new Schema<IWorkspace, WorkspaceModelType>(
 			ref: "User",
 		},
 	},
-	{ timestamps: true }
+	{ timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
+
+// Add decorations virtual
+WorkspaceSchema.virtual("decorations", {
+	ref: "SavedDecoration",
+	localField: "_id",
+	foreignField: "workspace",
+	justOne: false,
+});
 
 const WorkspaceModel = model<IWorkspace, WorkspaceModelType>(
 	"Workspace",
 	WorkspaceSchema
 );
+
 export default WorkspaceModel;
