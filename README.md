@@ -81,9 +81,3 @@ Make sure you have the following installed:
    Forking creates a copy of the repository under your GitHub account. This allows you to make changes without affecting the original repository.
 2. **Cloning**: Cloning downloads the repository to your local machine so you can work on it.
 3. **Contributing**: After making changes locally, you push them to your forked repository and create a pull request to propose your changes to the original repository.
-
-### Explanation of Forking, Cloning, and Contributing
-
-1. **Forking**: Forking creates a copy of the repository under your GitHub account. This allows you to make changes without affecting the original repository.
-2. **Cloning**: Cloning downloads the repository to your local machine so you can work on it.
-3. **Contributing**: After making changes locally, you push them to your forked repository and create a pull request to propose your changes to the original repository.
