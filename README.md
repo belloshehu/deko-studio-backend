@@ -40,11 +40,15 @@ Make sure you have the following installed:
    git clone https://github.com/belloshehu/deko-studio-backend
 
    cd deko-studio-backend
-
-   npm install
    ```
 
-3. **Set environment variables**
+3. **Install dependencies**
+
+   ```bash
+      npm install
+   ```
+
+4. **Set environment variables**
 
    ```bash
    DATABASE_URL=your-database-url
@@ -56,27 +60,25 @@ Make sure you have the following installed:
    JWT_COOKIE_LIFETIME=
    ORIGIN=
    CREDENTIALS=
-
    ```
 
-4. **Start the local server**
+5. **Start the local server**
 
-````bash
- npm run dev
+   ```bash
+   npm run dev
+   ```
 
- ```
-
-5. **Push your local changes**
- ```bash
- git checkout -b feature-name
- git commit -m " Add your message here"
- git push origin feature-name
-
- ```
+6. **Push your local changes**
+   ```bash
+   git checkout -b feature-name
+   git commit -m " Add your message here"
+   git push origin feature-name
+   ```
 
 ### Explanation of Forking, Cloning, and Contributing
 
-1. **Forking**: Forking creates a copy of the repository under your GitHub account. This allows you to make changes without affecting the original repository.
+1. **Forking**:
+   Forking creates a copy of the repository under your GitHub account. This allows you to make changes without affecting the original repository.
 2. **Cloning**: Cloning downloads the repository to your local machine so you can work on it.
 3. **Contributing**: After making changes locally, you push them to your forked repository and create a pull request to propose your changes to the original repository.
 
@@ -85,7 +87,3 @@ Make sure you have the following installed:
 1. **Forking**: Forking creates a copy of the repository under your GitHub account. This allows you to make changes without affecting the original repository.
 2. **Cloning**: Cloning downloads the repository to your local machine so you can work on it.
 3. **Contributing**: After making changes locally, you push them to your forked repository and create a pull request to propose your changes to the original repository.
-
-
-
-````
